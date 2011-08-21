@@ -4,8 +4,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>$webtitle</title>
-<link rel="stylesheet" type="text/css" href='/css/main.css' media="screen" />
+	<title><?php echo $webtitle ?></title>
+<link rel="stylesheet" type="text/css" href="<?php echo "/css/main.css"; ?> ">
+<link rel="stylesheet" type="text/css" href="/css/humanity/jquery-ui-1.8.15.custom.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.8.15.custom.min.js"></script>
+
 </head>
 
 <body>
@@ -15,6 +19,7 @@
 <?php echo $menu; ?>
 </div>
         <div id="right">
+            <h2>Top DKP Players</h2>
 <table>
     <tr>
         <th>Name</th>
@@ -34,7 +39,7 @@
     }
      
      
-    echo "<tr style=\"color: $Color;\"><td>";
+    echo "<tr style=\"color: $Color; \"><td>";
     echo $Character->name;
     echo "</td><td>";
     echo $Class;
@@ -47,7 +52,8 @@
 </table>
             
         </div>
-
+        <div id="spacer"></div>
+        
 <p><br />Page rendered in {elapsed_time} seconds</p>
 <?php $this->load->view('footer'); ?>
 </body>

@@ -41,10 +41,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'ci';
+$db['default']['hostname'] = 'internal-db.s123638.gridserver.com';
+$db['default']['username'] = 'db123638';
+$db['default']['password'] = 'AF817984';
+$db['default']['database'] = 'db123638_ci';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

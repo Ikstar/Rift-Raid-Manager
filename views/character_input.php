@@ -1,6 +1,30 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="<?php echo "/css/main.css"; ?> ">
+<link rel="stylesheet" type="text/css" href="/css/humanity/jquery-ui-1.8.15.custom.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.15.custom.min.js"></script>
+ <script type="text/javascript">
+      function log( message ) {
+			$( "<div/>" ).text( message ).prependTo( "#log" );
+			$( "#log" ).scrollTop( 0 );
+		}
+        $(document).ready(function(){
+           
+       		$( "#name" ).autocomplete({
+			source: "character/AutoComplete",
+			minLength: 2,
+			select: function( event, ui ) {
+				log( ui.item ?
+					"Selected: " + ui.item.value + " aka " + ui.item.id :
+					"Nothing selected, input was " + this.value );
+			}
+		});
+                $('input').button();
+	});
+        
+    
+    </script>
 </head>
 <body>
 
@@ -21,6 +45,7 @@
 <?php echo form_close(); ?>
         </div>
     </div>
+    <div id="spacer"></div>
 <div id="footer">
 <?php $this->load->view('footer'); ?>
 </div>

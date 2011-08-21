@@ -26,7 +26,7 @@ Class main_model extends CI_Model {
     {
         
          $this->db->order_by('DKP','desc');
-         $query = $this->db->get('chars');
+         $query = $this->db->get('chars', 5);
         if($query->num_rows() < 0)
         {
             show_error('Database is empty!');
